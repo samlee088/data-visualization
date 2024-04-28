@@ -9,7 +9,9 @@ rw.fill_walk()
 
 # Plot the point in the walk.
 plt.style.use('classic')
-fig, ax = plt.subplots()
+# fig, ax = plt.subplots()
+# Adjustment to rendering plot with different window sizes, ie different screen resolution
+fig, ax = plt.subplots(figsize=(10,6), dpi = 128)
 ax.scatter(rw.x_values, rw.y_values, s = 15)
 ax.set_aspect('equal')
 
@@ -26,7 +28,9 @@ while True:
 
     # Plot the point in the walk.
     plt.style.use('classic')
-    fig, ax = plt.subplots()
+    # fig, ax = plt.subplots()
+    # Adjustment to rendering plot with different window sizes, ie different screen resolution
+    fig, ax = plt.subplots(figsize=(10,6), dpi = 128)
     point_numbers = range(rw.num_points)
     ax.scatter(rw.x_values, rw.y_values, c = point_numbers, cmap = plt.cm.Blues, edgecolors = 'none', s = 1)
     ax.set_aspect('equal')
