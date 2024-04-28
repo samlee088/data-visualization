@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+plt.style.available 
 
 # Basic rendering of data on a plot graph
 squares = [1, 4, 9, 16, 25]
@@ -29,6 +30,7 @@ plt.show()
 input_values = [1,2,3,4,5]
 squares = [1, 4, 9, 16, 25]
 
+plt.style.use('seaborn-v0_8')
 fig, ax = plt.subplots()
 ax.plot(input_values, squares, linewidth = 3)
 
