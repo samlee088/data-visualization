@@ -31,3 +31,23 @@ labels = {"x": "die roll", "y": "frequencies"}
 # Visualize the results
 fig = px.bar(x = poss_results, y = frequencies, title = title, labels = labels)
 fig.show()
+
+dice_one = Dice()
+dice_two = Dice()
+
+results = []
+for roll_num in range(1000):
+    result = dice_one.roll() + dice_two.roll()
+    results.append(result)
+
+frequencies = []
+max_result = dice_one.num_sides + dice_two.num_sides
+poss_results = range(2, max_result + 1)
+for value in poss_results:
+    frequency = results.count(value)
+    frequencies.append(frequency)
+
+title = "Results of rolling two dice"
+labels = {'x': 'Result', 'y': 'Frequency of result'}
+fig = px.bar(x = poss_results, y = frequencies, title = title, labels = labels)
+fig.show()
