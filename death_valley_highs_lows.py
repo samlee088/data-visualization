@@ -24,10 +24,6 @@ for row in reader:
         highs.append(high)
         lows.append(low)
         dates.append(date)
-
-    
-
-
     
 # Plot the high temperatures
 plt.style.use('seaborn-v0_8')
