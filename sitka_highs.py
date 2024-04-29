@@ -5,6 +5,7 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 
 path = Path('weather_data/sitka_weather_07-2021_simple.csv')
+path = Path('weather_data/sitka_weather_2021_simple.csv')
 lines = path.read_text(encoding = 'utf-8').splitlines()
 
 reader = csv.reader(lines)
@@ -37,3 +38,4 @@ ax.set_ylabel("Temperature (f)", fontsize = 16)
 ax.tick_params(labelsize = 16)
 
 plt.show()
+
